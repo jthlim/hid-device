@@ -1,0 +1,27 @@
+name: hid_device_macos
+description: macOS implementation of the hid_device plugin.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=2.10.0"
+
+flutter:
+  plugin:
+    implements: hid_device
+    platforms:
+      macos:
+        pluginClass: HidDevicePlugin
+        fileName: hid_device_macos.dart
+        dartPluginClass: HidDeviceMacOS
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hid_device_platform_interface:
+    path: ../hid_device_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.16.3

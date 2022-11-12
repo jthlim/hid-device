@@ -1,0 +1,27 @@
+name: hid_device_web
+description: Web platform implementation of hid_device
+version: 1.0.0
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=2.10.0"
+
+flutter:
+  plugin:
+    implements: hid_device
+    platforms:
+      web:
+        pluginClass: HidDevicePlugin
+        fileName: hid_device_web.dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  hid_device_platform_interface:
+    path: ../hid_device_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

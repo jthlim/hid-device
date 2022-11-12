@@ -1,0 +1,29 @@
+name: hid_device
+description: Flutter plugin for connecting/accessing hid device.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hid_device_web:
+    path: hid_device_web
+  hid_device_platform_interface:
+    path: hid_device_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  plugin:
+    platforms:
+      web:
+        default_package: hid_device_web
